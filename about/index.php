@@ -1,5 +1,6 @@
 <?php
-require_once('simplepie/1.2/simplepie.inc');
+define('WEB_ROOT', dirname (dirname(__FILE__)));
+require_once(WEB_ROOT . '/simplepie/1.2/simplepie.inc');
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
