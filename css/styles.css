@@ -82,3 +82,11 @@ ul#connect {
 	margin: 0 auto 0 50px;
 	font-size: 50%;
 }
+
+#stop-sopa {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 100000;
+	cursor: pointer;
+}
