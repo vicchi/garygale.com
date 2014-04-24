@@ -5,11 +5,11 @@
    <title>Gary Gale - Geotastic&#33;</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="google-site-verification" content="VyibKsAITAnnjrTv9ud4ivpQU1c5VhsZSF3H8nStnlQ">
-   <link rel="stylesheet" href="/yui/2.9.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
-	<link rel="stylesheet" href="/yui/2.9.0/build/base/base.css" type="text/css">
-	<link rel="stylesheet" href="/css/newstyles.css" type="text/css">
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="/archive/v1/yui/2.9.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+	<link rel="stylesheet" href="/archive/v1/yui/2.9.0/build/base/base.css" type="text/css">
+	<link rel="stylesheet" href="/archive/v1/css/newstyles.css" type="text/css">
+	<link rel="shortcut icon" href="/archive/v1/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/archive/v1/favicon.ico" type="image/x-icon">
 	<meta name="keywords" content="gary, gale, garygale, yahoo, ovi, nokia, geo, geotastic, geoinformatics, vicchi, blog, place, location, geolocation">
 
 <?php
