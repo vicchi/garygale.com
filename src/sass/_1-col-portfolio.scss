@@ -1,0 +1,31 @@
+body {
+	margin-top: 50px; /* 50px is the height of the navbar - change this if the navbarn height changes */
+	font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#top {
+	padding-top: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	//margin: 0 0 35px;
+	text-transform: uppercase;
+	font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+p {
+	margin: 0 0 25px;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+footer {
+	margin: 50px 0;
+}

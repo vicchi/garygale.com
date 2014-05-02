@@ -1,0 +1,9 @@
+// customize bootstrap variables here:
+@import "variables";
+$icon-font-path: "/src/sass/fonts/bootstrap/";
+@import "bootstrap";
+
+@import "colors";
+@import "navigation";
+@import "garygale";
+@import "footer";

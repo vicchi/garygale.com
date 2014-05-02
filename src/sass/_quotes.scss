@@ -1,0 +1,28 @@
+blockquote {
+	margin: 0 0 25px;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+blockquote:before {
+	content: '\201C';
+	font-size: 350%;
+	font-family: Times New Roman;
+	padding-right: 10px;
+
+
+	margin: 1em -.15em 1em -.15em;
+	padding: .15em -.5em -.5em -.5em;
+	font-size:60px;
+	line-height:12px;
+	vertical-align:middle;
+	font-weight:bold;
+	//font-family:Arial, Helvetica, sans-serif;
+}
+
+//q:after {
+//	content: '\201D';
+//	font-size: 350%;
+//	font-family: Times New Roman;
+//	padding-left: 20px;
+//}

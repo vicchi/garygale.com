@@ -1,0 +1,15 @@
+@import "variables";
+$icon-font-path: "/src/sass/fonts/bootstrap/";
+@import "bootstrap";
+
+@import "archive-colors";
+@import "navigation";
+
+@media(min-width:767px) {
+	.navbar {
+		background-color: $dark;
+	}
+}
+
+@import "1-col-portfolio";
+@import "footer";
