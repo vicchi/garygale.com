@@ -1,6 +1,9 @@
 <?php
 
-$feed = simplexml_load_file('https://feeds.foursquare.com/history/847e3859509eb57e04dba9fb6b4c136a.kml?count=1');
+require_once('config.php');
+
+$url = $feed_url . '?count=1';
+$feed = simplexml_load_file($url);
 echo json_encode($feed->Folder);
 
 ?>

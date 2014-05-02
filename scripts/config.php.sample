@@ -1,0 +1,9 @@
+<?php
+
+/*
+ * Your Foursquare RSS feed url - find it at https://foursquare.com/feeds/
+ */
+
+$feed_url = 'https://feeds.foursquare.com/history/xxxxxxx.kml';
+
+?>
