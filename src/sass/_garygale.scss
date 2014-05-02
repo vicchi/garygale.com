@@ -70,7 +70,8 @@ a:focus {
     text-align: center;
     color: $light;
     //background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-    background: url(../img/intro-background-mono.jpg) no-repeat bottom center scroll;
+    //background: url(../img/intro-background-mono.jpg) no-repeat bottom center scroll;
+    background: url(../img/gary-mono.png) no-repeat bottom center scroll;
     background-color: $dark;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -109,7 +110,8 @@ a:focus {
 
 .work {
     @extend .intro;
-    background: url(../img/work-wherecamp-mono.jpg) no-repeat bottom center scroll;
+    //background: url(../img/work-wherecamp-mono.jpg) no-repeat bottom center scroll;
+    background: url(../img/work-wherecamp-mono.png) no-repeat bottom center scroll;
 
     .heading, p {
         background: rgba(0, 0, 0, 0.5);
@@ -122,7 +124,8 @@ a:focus {
 
 .relax {
     @extend .intro;
-    background: url(../img/relax-bilbao-mono.jpg) no-repeat bottom center scroll;
+    //background: url(../img/relax-bilbao-mono.jpg) no-repeat bottom center scroll;
+    background: url(../img/relax-bilbao-mono.png) no-repeat bottom center scroll;
 
     .heading, p {
         background: rgba(0, 0, 0, 0.5);
@@ -218,18 +221,6 @@ a:focus {
     padding-top: 100px;
 }
 
-.download-section {
-    width: 100%;
-    padding: 50px 0;
-    color: $light;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: $dark;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
 #map {
     width: 100%;
     height: 200px;
@@ -239,10 +230,6 @@ a:focus {
 @media(min-width:767px) {
     .content-section {
         padding-top: 250px;
-    }
-
-    .download-section {
-        padding: 100px 0;
     }
 
     #map {

@@ -8038,7 +8038,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(../img/intro-background-mono.jpg) no-repeat bottom center scroll;
+  background: url(../img/gary-mono.png) no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -8046,67 +8046,67 @@ a:focus {
   -o-background-size: cover;
 }
 
-/* line 81, ../sass/_garygale.scss */
+/* line 82, ../sass/_garygale.scss */
 .intro-body {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 86, ../sass/_garygale.scss */
+/* line 87, ../sass/_garygale.scss */
 .brand-heading {
   font-size: 40px;
 }
 
-/* line 90, ../sass/_garygale.scss */
+/* line 91, ../sass/_garygale.scss */
 .intro-text {
   font-size: 18px;
 }
 
 @media (min-width: 767px) {
-  /* line 95, ../sass/_garygale.scss */
+  /* line 96, ../sass/_garygale.scss */
   .intro, .work, .relax {
     height: 100%;
     padding: 0;
   }
 
-  /* line 100, ../sass/_garygale.scss */
+  /* line 101, ../sass/_garygale.scss */
   .brand-heading {
     font-size: 100px;
   }
 
-  /* line 104, ../sass/_garygale.scss */
+  /* line 105, ../sass/_garygale.scss */
   .intro-text {
     font-size: 25px;
     background: rgba(0, 0, 0, 0.5);
   }
 }
-/* line 110, ../sass/_garygale.scss */
+/* line 111, ../sass/_garygale.scss */
 .work {
-  background: url(../img/work-wherecamp-mono.jpg) no-repeat bottom center scroll;
+  background: url(../img/work-wherecamp-mono.png) no-repeat bottom center scroll;
 }
-/* line 114, ../sass/_garygale.scss */
+/* line 116, ../sass/_garygale.scss */
 .work .heading, .work p {
   background: rgba(0, 0, 0, 0.5);
 }
-/* line 118, ../sass/_garygale.scss */
+/* line 120, ../sass/_garygale.scss */
 .work .heading {
   padding: 0 10px 0 10px;
 }
 
-/* line 123, ../sass/_garygale.scss */
+/* line 125, ../sass/_garygale.scss */
 .relax {
-  background: url(../img/relax-bilbao-mono.jpg) no-repeat bottom center scroll;
+  background: url(../img/relax-bilbao-mono.png) no-repeat bottom center scroll;
 }
-/* line 127, ../sass/_garygale.scss */
+/* line 130, ../sass/_garygale.scss */
 .relax .heading, .relax p {
   background: rgba(0, 0, 0, 0.5);
 }
-/* line 131, ../sass/_garygale.scss */
+/* line 134, ../sass/_garygale.scss */
 .relax .heading {
   padding: 0 10px 0 10px;
 }
 
-/* line 136, ../sass/_garygale.scss */
+/* line 139, ../sass/_garygale.scss */
 .btn-circle {
   width: 70px;
   height: 70px;
@@ -8122,7 +8122,7 @@ a:focus {
   transition: background .3s ease-in-out;
 }
 
-/* line 152, ../sass/_garygale.scss */
+/* line 155, ../sass/_garygale.scss */
 .btn-circle:hover,
 .btn-circle:focus {
   outline: none;
@@ -8130,7 +8130,7 @@ a:focus {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* line 158, ../sass/_garygale.scss */
+/* line 161, ../sass/_garygale.scss */
 .page-scroll .btn-circle i.animated {
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-duration: 1s;
@@ -8138,7 +8138,7 @@ a:focus {
   -moz-transition-duration: 1s;
 }
 
-/* line 165, ../sass/_garygale.scss */
+/* line 168, ../sass/_garygale.scss */
 .page-scroll .btn-circle:hover i.animated {
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
@@ -8150,26 +8150,26 @@ a:focus {
   -moz-animation-timing-function: linear;
 }
 
-/* line 176, ../sass/_garygale.scss */
+/* line 179, ../sass/_garygale.scss */
 .btn-circle-dark {
   color: black;
   border-color: black;
 }
 
 @-webkit-keyframes pulse {
-  /* line 182, ../sass/_garygale.scss */
+  /* line 185, ../sass/_garygale.scss */
   0 {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
 
-  /* line 187, ../sass/_garygale.scss */
+  /* line 190, ../sass/_garygale.scss */
   50% {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
   }
 
-  /* line 192, ../sass/_garygale.scss */
+  /* line 195, ../sass/_garygale.scss */
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -8177,44 +8177,31 @@ a:focus {
 }
 
 @-moz-keyframes pulse {
-  /* line 199, ../sass/_garygale.scss */
+  /* line 202, ../sass/_garygale.scss */
   0 {
     -moz-transform: scale(1);
     transform: scale(1);
   }
 
-  /* line 204, ../sass/_garygale.scss */
+  /* line 207, ../sass/_garygale.scss */
   50% {
     -moz-transform: scale(1.2);
     transform: scale(1.2);
   }
 
-  /* line 209, ../sass/_garygale.scss */
+  /* line 212, ../sass/_garygale.scss */
   100% {
     -moz-transform: scale(1);
     transform: scale(1);
   }
 }
 
-/* line 217, ../sass/_garygale.scss */
+/* line 220, ../sass/_garygale.scss */
 .content-section {
   padding-top: 100px;
 }
 
-/* line 221, ../sass/_garygale.scss */
-.download-section {
-  width: 100%;
-  padding: 50px 0;
-  color: white;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-
-/* line 233, ../sass/_garygale.scss */
+/* line 224, ../sass/_garygale.scss */
 #map {
   width: 100%;
   height: 200px;
@@ -8222,23 +8209,18 @@ a:focus {
 }
 
 @media (min-width: 767px) {
-  /* line 240, ../sass/_garygale.scss */
+  /* line 231, ../sass/_garygale.scss */
   .content-section {
     padding-top: 250px;
   }
 
-  /* line 244, ../sass/_garygale.scss */
-  .download-section {
-    padding: 100px 0;
-  }
-
-  /* line 248, ../sass/_garygale.scss */
+  /* line 235, ../sass/_garygale.scss */
   #map {
     height: 100%;
     margin-top: 250px;
   }
 }
-/* line 257, ../sass/_garygale.scss */
+/* line 244, ../sass/_garygale.scss */
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -8248,14 +8230,14 @@ a:focus {
   transition: all .3s ease-in-out;
 }
 
-/* line 266, ../sass/_garygale.scss */
+/* line 253, ../sass/_garygale.scss */
 .btn-default {
   border: 1px solid white;
   color: white;
   background-color: transparent;
 }
 
-/* line 273, ../sass/_garygale.scss */
+/* line 260, ../sass/_garygale.scss */
 .btn-default:hover,
 .btn-default:focus {
   border: 1px solid white;
@@ -8264,66 +8246,66 @@ a:focus {
   background-color: white;
 }
 
-/* line 280, ../sass/_garygale.scss */
+/* line 267, ../sass/_garygale.scss */
 .btn-huge {
   padding: 25px;
   font-size: 26px;
 }
 
-/* line 285, ../sass/_garygale.scss */
+/* line 272, ../sass/_garygale.scss */
 .banner-social-buttons {
   margin-top: 0;
 }
 
-/* line 289, ../sass/_garygale.scss */
+/* line 276, ../sass/_garygale.scss */
 ul.banner-social-buttons > li {
   padding: 0 0 10px 0;
 }
 
 @media (max-width: 1199px) {
-  /* line 294, ../sass/_garygale.scss */
+  /* line 281, ../sass/_garygale.scss */
   ul.banner-social-buttons {
     margin-top: 15px;
   }
 }
 @media (max-width: 767px) {
-  /* line 300, ../sass/_garygale.scss */
+  /* line 287, ../sass/_garygale.scss */
   ul.banner-social-buttons > li {
     display: block;
     margin-bottom: 20px;
     padding: 0;
   }
 
-  /* line 306, ../sass/_garygale.scss */
+  /* line 293, ../sass/_garygale.scss */
   ul.banner-social-buttons > li:last-child {
     margin-bottom: 0;
   }
 }
-/* line 313, ../sass/_garygale.scss */
+/* line 300, ../sass/_garygale.scss */
 ::-moz-selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 319, ../sass/_garygale.scss */
+/* line 306, ../sass/_garygale.scss */
 ::selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 325, ../sass/_garygale.scss */
+/* line 312, ../sass/_garygale.scss */
 img::selection {
   background: transparent;
 }
 
-/* line 329, ../sass/_garygale.scss */
+/* line 316, ../sass/_garygale.scss */
 img::-moz-selection {
   background: transparent;
 }
 
-/* line 333, ../sass/_garygale.scss */
+/* line 320, ../sass/_garygale.scss */
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
