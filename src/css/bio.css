@@ -7972,6 +7972,12 @@ button.close {
     background-color: black;
   }
 }
+@media (max-width: 767px) {
+  /* line 15, ../sass/bio.scss */
+  .btn-primary {
+    margin-bottom: 10px;
+  }
+}
 /* line 1, ../sass/_1-col-portfolio.scss */
 body {
   margin-top: 50px;
@@ -7997,14 +8003,14 @@ h6 {
   letter-spacing: 1px;
 }
 
-/* line 23, ../sass/_1-col-portfolio.scss */
+/* line 22, ../sass/_1-col-portfolio.scss */
 p {
   margin: 0 0 25px;
   font-size: 18px;
   line-height: 1.5;
 }
 
-/* line 29, ../sass/_1-col-portfolio.scss */
+/* line 28, ../sass/_1-col-portfolio.scss */
 footer {
   margin: 50px 0;
 }
