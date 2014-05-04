@@ -11,6 +11,12 @@ $icon-font-path: "/fonts/bootstrap/";
 	}
 }
 
+@media(max-width:767px) {
+	.btn-primary {
+		margin-bottom: 10px;
+	}
+}
+
 @import "1-col-portfolio";
 @import "quotes";
 @import "footer";
