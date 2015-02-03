@@ -1,6 +1,6 @@
 @import "variables";
-$icon-font-path: "/fonts/bootstrap/";
-@import "bootstrap";
+$icon-font-path: "/assets/fonts/";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 @import "archive-colors";
 @import "navigation";

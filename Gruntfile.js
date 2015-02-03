@@ -1,23 +1,31 @@
 module.exports = function(grunt) {
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		compass: {
+		copy: {
+			fonts: {
+				files: [
+					{
+						expand: true,
+						flatten: true,
+						nonull: true,
+						src: ['bower_components/bootstrap-sass/assets/fonts/bootstrap/*'],
+						dest: 'assets/fonts/'
+
+					}
+				]
+			}
+		},
+		sass: {
 			dist: {
-				options: {
-					sassDir: 'src/sass',
-					cssDir: 'src/css'
-				}
+				files: [
+					{
+						'assets/css/styles.css': 'src/sass/styles.scss',
+						'assets/css/archive.css': 'src/sass/archive.scss',
+						'assets/css/bio.css': 'src/sass/bio.scss'
+					}
+				]
 			}
 		},
 		imagemin: {
@@ -31,7 +39,7 @@ module.exports = function(grunt) {
 						cwd: 'src/img',
 						//src: ['**/*.png'],
 						src: ['*.png'],
-						dest: 'img/',
+						dest: 'assets/img/',
 						ext: '.png'
 					}
 				]
@@ -46,7 +54,7 @@ module.exports = function(grunt) {
 						cwd: 'src/img',
 						//src: ['**/*.jpg'],
 						src: ['*.jpg'],
-						dest: 'img/',
+						dest: 'assets/img/',
 						ext: '.jpg'
 					}
 				]
@@ -54,7 +62,7 @@ module.exports = function(grunt) {
 		},
 		clean: {
 			dist: {
-				src: ['img/*', 'css/*', 'js/*', 'src/css/*']
+				src: ['assets/**/*']
 			}
 		},
 		jshint: {
@@ -67,13 +75,13 @@ module.exports = function(grunt) {
 			files: ['src/js/*.js']
 		},
 		uglify: {
-			my_target: {
+			dist: {
 				files: [
 					{
 						expand: true,
 						cwd: 'src/js',
 						src: '*.js',
-						dest: 'js/',
+						dest: 'assets/js/',
 						ext: '.min.js'
 					}
 				]
@@ -82,30 +90,33 @@ module.exports = function(grunt) {
 		cssmin: {
 			minify: {
 				expand: true,
-				cwd: 'src/css',
-				src: '*.css',
-				dest: 'css/',
+				cwd: 'assets/css',
+				src: ['*.css', '!**/*.min.css'],
+				dest: 'assets/css/',
 				ext: '.min.css'
 			}
 		},
 		watch: {
-			dist: {
-				options: {
-					livereload: true
-				},
-				files: ['src/**/*'],
-				tasks: ['compass', 'cssmin', 'jshint', 'uglify']
+			options: {
+				livereload: true
+			},
+			sass: {
+				files: ['src/sass/*'],
+				tasks: ['sass']
 			}
 		}
 	});
 
-	grunt.registerTask('default', [
+	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('build', [
 		'clean',
+		'copy',
 		'imagemin',
-		'compass',
+		'sass',
 		'cssmin',
 		'jshint',
-		'uglify'
+		'uglify',
+		'nodsstore'
 	]);
 
 	grunt.registerTask('nodsstore', function() {

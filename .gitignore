@@ -1,7 +1,9 @@
 .DS_Store
 
-/.sass-cache/
+/.sass-cache
 
-/node_modules/
+/node_modules
 
 /scripts/config.php
+
+/bower_components

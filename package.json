@@ -1,42 +1,43 @@
 {
-	"name": "garygale.com",
-	"version": "3.0.0",
-	"description": "Source for www.garygale.com",
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:vicchi/garygale.com.git"
-	},
-	"homepage": "http://www.garygale.com/",
-	"author": {
-		"name": "Gary Gale",
-		"email": "gary@vicchi.org",
-		"url": "http://www.garygale.com/"
-	},
-	"license": "BSD",
-	"keywords": [
-		"gary",
-		"gale",
-		"geotastic",
-		"boostrap",
-		"sass",
-		"leaflet",
-		"stamen",
-		"toner"
-	],
-	"dependencies": {
-		"leaflet": "*"
-	},
-	"devDependencies": {
-	    "grunt": "^0.4.4",
-	    "grunt-cli": "~0.1.11",
-	    "grunt-contrib-clean": "^0.5.0",
-	    "grunt-contrib-concat": "^0.4.0",
-	    "grunt-contrib-copy": "^0.5.0",
-	    "grunt-contrib-cssmin": "^0.9.0",
-	    "grunt-contrib-jshint": "^0.10.0",
-	    "grunt-contrib-uglify": "^0.4.0",
-	    "grunt-contrib-watch": "^0.6.1",
-		"grunt-contrib-imagemin": "^0.6.1",
-		"grunt-contrib-compass": "^0.7.2"
-	}
+  "name": "garygale.com",
+  "version": "3.0.0",
+  "description": "Source for www.garygale.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vicchi/garygale.com.git"
+  },
+  "homepage": "http://www.garygale.com/",
+  "author": {
+    "name": "Gary Gale",
+    "email": "gary@vicchi.org",
+    "url": "http://www.garygale.com/"
+  },
+  "license": "BSD",
+  "keywords": [
+    "gary",
+    "gale",
+    "geotastic",
+    "boostrap",
+    "sass",
+    "leaflet",
+    "stamen",
+    "toner"
+  ],
+  "dependencies": {
+    "leaflet": "*"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-cli": "~0.1.11",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-imagemin": "^0.6.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^3.1.0"
+  }
 }
