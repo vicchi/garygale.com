@@ -15,6 +15,15 @@ module.exports = function(grunt) {
 
 					}
 				]
+			},
+			deploy: {
+				files: [
+					{
+						expand: true,
+						src: ['index.html', 'robots.txt', 'archive/**/*', 'assets/**/*', 'bio/**/*', 'favicon.ico', 'scripts/**/*'],
+						dest: 'deploy'
+					}
+				]
 			}
 		},
 		sass: {
@@ -110,7 +119,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['watch']);
 	grunt.registerTask('build', [
 		'clean',
-		'copy',
+		'copy:fonts',
 		'imagemin',
 		'sass',
 		'cssmin',
@@ -118,7 +127,7 @@ module.exports = function(grunt) {
 		'uglify',
 		'nodsstore'
 	]);
-
+	grunt.registerTask('deploy', ['build', 'copy:deploy']);
 	grunt.registerTask('nodsstore', function() {
 		grunt.file.expand({
 			filter: 'isFile',
