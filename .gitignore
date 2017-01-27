@@ -1,11 +1,6 @@
 .DS_Store
-
 /.sass-cache
-
 /node_modules
-
-/scripts/config.php
-
 /bower_components
-
 /deploy/
+/public/**

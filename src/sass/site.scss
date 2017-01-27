@@ -1,0 +1,129 @@
+//colors
+$white: #ffffff;
+$color_gable_green_approx: rgb(15, 58, 45);
+$color_suva_gray_approx: #888;
+
+//fonts
+$font_helvetica: Helvetica;
+$font_helvetica_neue: Helvetica Neue;
+$font_arial: Arial;
+$font_sans_serif: sans-serif;
+
+//@extend-elements
+//original selectors
+//#credits a, #about a
+%anchor {
+	color: $white;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 0 solid $color_gable_green_approx;
+}
+
+//original selectors
+//#credits a:hover, #about a:hover
+%anchor_hover {
+	text-decoration: none;
+	color: $color_suva_gray_approx;
+	border-bottom: 1px solid $white;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: none;
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	color: $white;
+	font-family: $font_helvetica;
+	font-size: 80%;
+	line-height: 20px;
+	margin-bottom: 15px;
+}
+
+#credits {
+	width: 400px;
+	padding: 50px 0 0 30px;
+	margin: 0 auto 0 50px;
+	font-size: 50%;
+
+	a {
+		@extend %anchor;
+
+		&:hover {
+			@extend %anchor_hover;
+		}
+	}
+}
+
+#about {
+	width: 400px;
+	padding: 50px 0 0 30px;
+	margin: 0 auto 0 50px !important;
+
+	a {
+		@extend %anchor;
+
+		&:hover {
+			@extend %anchor_hover;
+		}
+	}
+}
+
+h1 {
+	font-family: $font_helvetica_neue, $font_helvetica, $font_arial, $font_sans_serif;
+	font-weight: 300;
+	margin-bottom: 20px;
+	line-height: 130%;
+	color: $white;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: none;
+}
+
+#connect {
+	li {
+		display: inline;
+		list-style-type: none;
+	}
+
+	a {
+		text-decoration: none;
+		padding: 3px 5px;
+		border-style: none;
+
+		&:link {
+			text-decoration: none;
+			opacity: 0.2;
+			border-style: none;
+		}
+
+		&:hover {
+			text-decoration: none;
+			opacity: 1.0;
+			border-style: none;
+		}
+	}
+
+	img {
+		width: 55px;
+		height: 55px;
+		border: none;
+	}
+}
+
+#stop-sopa {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 100000;
+	cursor: pointer;
+}
+
+ul#connect {
+	white-space: nowrap;
+	width: 400px;
+	padding: 10px 0 0 20px;
+	margin: 0 auto 0 50px !important;
+}

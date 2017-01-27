@@ -1,13 +1,12 @@
 {
   "name": "garygale.com",
-  "version": "3.0.0",
-  "homepage": "http://www.garygale.com",
+  "description": "The source for garygale.com",
+  "main": "public/index.html",
   "authors": [
-    "vicchi <gary@vicchi.org>"
+    "Gary Gale <gary@vicchi.org>"
   ],
-  "description": "Source for www.garygale.com",
-  "main": "index.html",
-  "license": "BSD",
+  "license": "MIT",
+  "homepage": "https://github.com/vicchi/garygale.com",
   "private": true,
   "ignore": [
     "**/.*",
@@ -17,6 +16,7 @@
     "tests"
   ],
   "devDependencies": {
-    "bootstrap-sass": "~3.3.3"
+    "jquery": "^3.1.1",
+    "jquery-backstretch-2": "^2.1.15"
   }
 }

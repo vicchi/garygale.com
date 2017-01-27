@@ -1,0 +1,22 @@
+{
+  "name": "garygale.com",
+  "version": "3.0.0",
+  "homepage": "http://www.garygale.com",
+  "authors": [
+    "vicchi <gary@vicchi.org>"
+  ],
+  "description": "Source for www.garygale.com",
+  "main": "index.html",
+  "license": "BSD",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.3"
+  }
+}
