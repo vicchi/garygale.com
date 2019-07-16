@@ -1,25 +1,18 @@
+sass = require('node-sass');
 module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            rebuild: ['public/*']
+            rebuild: ['public/']
         },
         concat: {
-            main: {
-                src: [
-                    'bower_components/jquery/dist/jquery.js',
-                    'bower_components/jquery-backstretch-2/jquery.backstretch.js',
-                    'src/js/site.js'
-                ],
-                dest: 'public/assets/js/site.js'
-            },
             preload: {
                 src: [
                     'src/js/google-tracking.js'
                 ],
-                dest: 'public/assets/js/preload.js'
+                dest: 'public/assets/js/site.js'
             }
         },
         copy: {
@@ -33,7 +26,17 @@ module.exports = function(grunt) {
             },
             icons: {
                 files: [{
+                    expand: true,
+                    cwd: 'src/images',
                     src: ['favicon.ico'],
+                    dest: 'public/'
+                }]
+            },
+            misc: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/misc',
+                    src: ['**/*', '**/.*'],
                     dest: 'public/'
                 }]
             }
@@ -60,11 +63,13 @@ module.exports = function(grunt) {
             }
         },
         sass: {
-            site: {
-                options: {
-                    style: 'nested',
-                    sourcemap: 'none'
-                },
+            options: {
+                implementation: sass,
+                outputStyle: 'expanded',
+                indentType: 'tab',
+                indentWidth: 1
+            },
+            dist: {
                 files: {
                     'public/assets/css/site.css': 'src/sass/site.scss'
                 }
@@ -73,7 +78,6 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 files: {
-                    'public/assets/js/preload.min.js': 'public/assets/js/preload.js',
                     'public/assets/js/site.min.js': 'public/assets/js/site.js'
                 }
             }
@@ -88,10 +92,10 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['src/js/*.js'],
-                tasks: ['concat:main', 'concat:preload']
+                tasks: ['concat', 'uglify']
             },
             uglify: {
-                files: ['public/assets/js/*.css', '!public/assets/js/*.min.js'],
+                files: ['!public/assets/js/*.min.js'],
                 tasks: ['uglify']
             },
             sass: {
@@ -105,6 +109,10 @@ module.exports = function(grunt) {
             html: {
                 files: ['src/html/**/*.html'],
                 tasks: ['copy:html']
+            },
+            robots: {
+                files: ['src/misc/**'],
+                tasks: ['copy:robots']
             }
         }
     });
@@ -120,41 +128,6 @@ module.exports = function(grunt) {
         });
     });
 
-    grunt.registerTask('update', function() {
-        var async = require('async');
-        var exec = require('child_process').exec;
-        var done = this.async();
-
-        var runCmd = function(item, callback) {
-            process.stdout.write('Running "' + item + '" ...\n');
-            var cmd = exec(item);
-            cmd.stdout.on('data', function(data) {
-                grunt.log.writeln(data);
-            });
-            cmd.stderr.on('data', function(data) {
-                grunt.log.errorlns(data);
-            });
-            cmd.on('exit', function(code) {
-                if (code !== 0) throw new Error(item + ' failed');
-                grunt.log.writeln('Done\n');
-                callback();
-            });
-        };
-
-        async.series({
-                npm: function(callback) {
-                    runCmd('npm update', callback);
-                },
-                bower: function(callback) {
-                    runCmd('bower update', callback);
-                }
-            },
-            function(err, results) {
-                if (err) done(false);
-                done();
-            });
-    });
-
     grunt.registerTask('build', ['concat', 'copy', 'imagemin', 'sass', 'cssmin', 'uglify']);
-    grunt.registerTask('rebuild', ['clean', 'update', 'build']);
+    grunt.registerTask('rebuild', ['clean', 'build']);
 };

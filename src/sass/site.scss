@@ -1,129 +1,99 @@
-//colors
-$white: #ffffff;
-$color_gable_green_approx: rgb(15, 58, 45);
-$color_suva_gray_approx: #888;
-
-//fonts
-$font_helvetica: Helvetica;
-$font_helvetica_neue: Helvetica Neue;
-$font_arial: Arial;
-$font_sans_serif: sans-serif;
-
-//@extend-elements
-//original selectors
-//#credits a, #about a
-%anchor {
-	color: $white;
-	font-weight: bold;
-	text-decoration: none;
-	border-bottom: 0 solid $color_gable_green_approx;
-}
-
-//original selectors
-//#credits a:hover, #about a:hover
-%anchor_hover {
-	text-decoration: none;
-	color: $color_suva_gray_approx;
-	border-bottom: 1px solid $white;
-	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	text-shadow: none;
-}
-
+$colour_grey: #e9e9e9;
+$colour_white: #fff;
+$font_family: ScandiaWebRegular, sans-serif;
+$colour_black: #000;
 
 * {
 	padding: 0;
 	margin: 0;
 }
 
-p {
-	color: $white;
-	font-family: $font_helvetica;
-	font-size: 80%;
-	line-height: 20px;
-	margin-bottom: 15px;
+body {
+	background-color: $colour_black;
 }
 
-#credits {
-	width: 400px;
-	padding: 50px 0 0 30px;
-	margin: 0 auto 0 50px;
-	font-size: 50%;
-
-	a {
-		@extend %anchor;
-
-		&:hover {
-			@extend %anchor_hover;
-		}
-	}
-}
-
-#about {
-	width: 400px;
-	padding: 50px 0 0 30px;
-	margin: 0 auto 0 50px !important;
-
-	a {
-		@extend %anchor;
-
-		&:hover {
-			@extend %anchor_hover;
-		}
-	}
+.img {
+	position: fixed;
+	top: 0;
+	left: 0px;
+	width: 50%;
+	height: 100%;
+	z-index: 1;
+	background: url(../images/gary-gale.jpg) no-repeat center center;
+	background-size: cover;
 }
 
 h1 {
-	font-family: $font_helvetica_neue, $font_helvetica, $font_arial, $font_sans_serif;
-	font-weight: 300;
-	margin-bottom: 20px;
-	line-height: 130%;
-	color: $white;
-	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	text-shadow: none;
+	font-family: $font_family;
+	color: $colour_grey;
+	font-size: 40px;
+	line-height: 50px;
+	font-weight: 400;
+	margin-bottom: 24px;
+	z-index: 2;
 }
 
-#connect {
-	li {
-		display: inline;
-		list-style-type: none;
-	}
+p {
+	color: $colour_grey;
+	font-family: $font_family;
+	font-size: 16px;
+	line-height: 28px;
+	margin-bottom: 24px;
+	-webkit-font-smoothing: antialiased;
+	z-index: 2;
+}
 
-	a {
-		text-decoration: none;
-		padding: 3px 5px;
-		border-style: none;
+a {
+	color: $colour_white;
+	text-decoration: none;
+	padding-bottom: 2px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
 
-		&:link {
-			text-decoration: none;
-			opacity: 0.2;
-			border-style: none;
-		}
-
-		&:hover {
-			text-decoration: none;
-			opacity: 1.0;
-			border-style: none;
-		}
-	}
-
-	img {
-		width: 55px;
-		height: 55px;
-		border: none;
+	&:hover {
+		border-bottom: 1px solid rgba(255,255,255,1);
 	}
 }
 
-#stop-sopa {
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 100000;
-	cursor: pointer;
+.outer {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	z-index: 2;
+	margin-left: 50%;
 }
 
-ul#connect {
-	white-space: nowrap;
-	width: 400px;
-	padding: 10px 0 0 20px;
-	margin: 0 auto 0 50px !important;
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.inner {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+@media (max-width: 767px) {
+	h1 {
+		font-size: 24px;
+		line-height: 34px;
+	}
+
+	p {
+		font-size: 18px;
+		line-height: 28px;
+		text-align: left;
+	}
+
+	.img {
+		width: 20%;
+	}
+
+	.outer {
+		width: 80%;
+		margin-left: 20%;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 }
