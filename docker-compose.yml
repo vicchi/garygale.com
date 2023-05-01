@@ -1,0 +1,22 @@
+services:
+  site:
+    image: sebp/lighttpd
+    networks:
+      - vicchi-backend
+    expose:
+      - 80
+    restart: unless-stopped
+    tty: true
+    volumes:
+        - ./public:/var/www/localhost/htdocs
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.garygale-com.rule=Host(`${SITE_HOST:?Site host not defined}`)
+      - traefik.http.routers.garygale-com.entrypoints=websecure
+      - traefik.http.routers.garygale-com.tls.certresolver=reverse-proxy
+      - traefik.http.routers.garygale-com.tls.options=proxy-default@file
+      - traefik.http.routers.garygale-com.middlewares=secHeaders@file
+
+networks:
+    vicchi-backend:
+      external: true
