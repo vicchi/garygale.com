@@ -4,3 +4,4 @@
 /deploy/
 /public/
 .direnv/
+.env
